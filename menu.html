@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1024">
+<title>Food Menu</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="menu-container">
+<div class="navbar">
+<span class="logo">BLACK-BOT DELIVERY</span>
+<div class="nav-tabs">
+<button onclick="switchCategory('noodles')">Noodles</button>
+<button onclick="switchCategory('rice')">Rice</button>
+<button class="active" onclick="switchCategory('soup')">Soup</button>
+<button onclick="switchCategory('salad')">Salad</button>
+<button onclick="switchCategory('sushi')">Sushi</button>
+</div>
+<button onclick="location.href='cart.html'" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+</div>
+
+<div class="sub-tabs">
+<button onclick="switchSub('seafood')">Seafood</button>
+<button class="active" onclick="switchSub('veggie')">Veggie</button>
+<button onclick="switchSub('meat')">Meat</button>
+<button onclick="switchSub('poultry')">Poultry</button>
+</div>
+
+<div class="food-list" id="food-list">
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

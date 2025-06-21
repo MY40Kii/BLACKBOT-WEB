@@ -1,0 +1,369 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("images/white-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #000000;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("images/thick-line-bg.jpeg");
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home button {
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.home button:hover {
+  background-color: #000000;
+}
+
+.menu-container {
+  padding: 50px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-tabs button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin: 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.nav-tabs button.active {
+  border-bottom: 2px solid #f1da36;
+  font-weight: bold;
+}
+
+.sub-tabs {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.sub-tabs button {
+  padding: 8px 16px;
+  background-color: #fff4c4;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.sub-tabs button.active,
+.sub-tabs button:hover {
+  background-color: #ffe066;
+}
+
+.food-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.food-card {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.2s;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+.food-card:hover {
+  transform: translateY(-4px);
+}
+
+.food-img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.food-card h3 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 0px;
+}
+
+.food-card .price {
+  color: #d35400;
+  font-weight: 1000;
+  white-space: nowrap;
+}
+
+.food-card small {
+  color: green;
+  font-weight: 500;
+}
+
+.food-card p {
+  margin: 0px 0 15px;
+  color: #555;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.title-row h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.title-row small {
+  color: green;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+.food-card button {
+  padding: 8px 16px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+  flex-wrap: nowrap;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.bottom-row .price {
+  color: #d35400;
+  font-weight: bold;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
+
+.bottom-row button {
+  flex-shrink: 0;
+  max-width: 150px;
+}
+
+.cart-btn {
+  background: #fff;
+  color: #000000;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-container,
+.order-confirmation {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  font-size: 1.1rem;
+}
+
+#total {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #c0392b;
+}
+
+.cart-container button,
+.order-confirmation button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cart-container button:hover,
+.order-confirmation button:hover {
+  background-color: #0055aa;
+}
+
+@media (max-width: 600px) {
+  .menu-container {
+    padding: 50px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 25px;
+    position: relative;
+  }
+
+  .logo {
+    font-size: 21px;
+    padding-right: 0px;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    margin-top: 3px;
+  }
+
+  .cart-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 10;
+  }
+
+  .nav-tabs,
+  .sub-tabs {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .nav-tabs button,
+  .sub-tabs button {
+    margin: 0 10px 0 0;
+    font-size: 0.9rem;
+  }
+
+  .food-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .food-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .food-card h3 {
+    font-size: 20px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
+  
+  .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .title-row h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1 1 auto;
+  }
+
+  .title-row small {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .bottom-row {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .bottom-row .price {
+    font-size: 24px;
+  }
+
+  .bottom-row button {
+    max-width: none;
+    font-size: 20px;
+  }
+}
